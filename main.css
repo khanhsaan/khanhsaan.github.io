@@ -1,0 +1,106 @@
+.product-device-2 {
+    position: absolute;
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+    width: 280px; /* Maintain width */
+    height: 498px; /* Adjust height for 9:16 aspect ratio */
+}
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px; /* Maintain width */
+    height: 533px; /* Adjust height for 9:16 aspect ratio */
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+}
+
+.product-device::before{
+    position: absolute;
+    top: 5%; /* Space from top */
+    right: 5%; /* Space from right */
+    bottom: 5%; /* Space from bottom */
+    left: 5%; /* Space from left */
+    content: "";
+    background-size: contain; /* Scale the image proportionally */
+    background-image: url('/home_page.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    border-radius: 5px;
+}
+.product-device-2::before {
+    position: absolute;
+    top: 5%; /* Space from top */
+    right: 5%; /* Space from right */
+    bottom: 5%; /* Space from bottom */
+    left: 5%; /* Space from left */
+    content: "";
+    background-size: contain; /* Scale the image proportionally */
+    background-image: url('/home_page_2.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    border-radius: 5px;
+}
+
+.d-md-flex {
+    display: flex !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.nav-link-white {
+    color: white !important; /* Ensure it overrides other styles */
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.phone-screen {
+    width: 240px; /* Adjust width for phone size */
+    aspect-ratio: 9 / 17; /* Maintain 9:16 ratio */
+    background-color: #333; /* Simulate phone body color */
+    border-radius: 21px; /* Rounded corners like a phone */
+    padding: 10px; /* Optional: Inner spacing to mimic bezels */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image stays within the container */
+}
+
+.phone-screen img {
+    max-width: 100%; /* Ensure the image fits the width */
+    max-height: 100%; /* Ensure the image fits the height */
+    border-radius: 10px; /* Optional: Mimic screen rounding */
+}
+
+#product-section, #features-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #product-section, #features-section {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    #product-section, #features-section > div {
+        width: 100%; /* Ensure items take full width on small screens */
+        margin-bottom: 1rem; /* Add spacing between items */
+    }
+}
+
+
+
+
